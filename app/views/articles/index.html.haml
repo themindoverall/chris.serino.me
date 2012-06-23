@@ -1,3 +1,6 @@
 = render partial: 'subnav', locals: {action: :blog_path}
 #article-content
-	= render partial: "article", collection: @articles, spacer_template: "inner_hr"
+	- if @articles
+		= render partial: "article", collection: @articles, spacer_template: "inner_hr"
+	- else
+		No articles.
