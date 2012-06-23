@@ -1,0 +1,3 @@
+= render partial: 'subnav', locals: {action: :work_path}
+#article-content
+	= render partial: 'project', collection: @projects, spacer_template: "inner_hr" or "No projects."

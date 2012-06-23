@@ -1,0 +1,9 @@
+%article.brief
+	%section.title
+		= link_to project.title, project
+	%section.summary= markdown project.summary
+	%section.actions
+		= link_to 'Read more...', project
+	%section.info
+		-# Posted
+		-# %abbr{class: "timeago", title: article.created_at.iso8601 }= article.created_at.strftime('%B %-d, %Y at %l:%M%p')

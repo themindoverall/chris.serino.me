@@ -1,0 +1,11 @@
+%nav.subnav
+	#right
+		%a{href: 'javascript: void(0);'} most recent...
+	%ul
+		- for cat in @categories
+			%li
+				- if @category == cat
+					= cat
+				- else
+					%a{href: if cat == 'all' then send(action) else send(action, cat) end}
+						= cat

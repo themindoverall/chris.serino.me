@@ -1,0 +1,14 @@
+%header#header
+	.content
+		#title
+			= link_to root_url do
+				%h1 Chris Serino
+				%h2 software engineer
+		%nav
+			%ul
+				- for name, n in @nav
+					%li
+						- if n[:current]
+							.selected= n[:title]
+						- else
+							= link_to n[:title], n[:path]

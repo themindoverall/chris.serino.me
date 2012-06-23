@@ -1,0 +1,4 @@
+= render partial: 'subnav', locals: {action: :blog_path}
+#article-content
+	%h2= @article.title
+	%p= markdown @article.body
